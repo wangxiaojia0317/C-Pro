@@ -1,0 +1,9 @@
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\PinYinRegex.exe.config
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\PinYinRegex.exe
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\PinYinRegex.pdb
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\ChnCharInfo.dll
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\ChnCharInfo.xml
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\obj\Debug\PinYinRegex.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\obj\Debug\PinYinRegex.exe
+E:\AC_Victor\My\Programer\ConProgram\PinYinRegex\obj\Debug\PinYinRegex.pdb

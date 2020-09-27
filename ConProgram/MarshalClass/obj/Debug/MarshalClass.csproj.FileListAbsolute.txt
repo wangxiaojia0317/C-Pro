@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\MarshalClass\bin\Debug\MarshalClass.exe.config
+E:\AC_Victor\My\ConProgram\MarshalClass\bin\Debug\MarshalClass.exe
+E:\AC_Victor\My\ConProgram\MarshalClass\bin\Debug\MarshalClass.pdb
+E:\AC_Victor\My\ConProgram\MarshalClass\obj\Debug\MarshalClass.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\MarshalClass\obj\Debug\MarshalClass.exe
+E:\AC_Victor\My\ConProgram\MarshalClass\obj\Debug\MarshalClass.pdb
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\bin\Debug\MarshalClass.exe.config
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\bin\Debug\MarshalClass.exe
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\bin\Debug\MarshalClass.pdb
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\obj\Debug\MarshalClass.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\obj\Debug\MarshalClass.exe
+E:\AC_Victor\My\Programer\ConProgram\MarshalClass\obj\Debug\MarshalClass.pdb

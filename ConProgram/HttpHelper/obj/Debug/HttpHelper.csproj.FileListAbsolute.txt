@@ -1,0 +1,8 @@
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\bin\Debug\HttpHelper.exe.config
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\bin\Debug\HttpHelper.exe
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\bin\Debug\HttpHelper.pdb
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\obj\Debug\HttpHelper.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\obj\Debug\HttpHelper.exe
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\obj\Debug\HttpHelper.pdb
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\bin\Debug\Spring.Core.dll
+E:\AC_Victor\My\Programer\ConProgram\HttpHelper\bin\Debug\Newtonsoft.Json.dll

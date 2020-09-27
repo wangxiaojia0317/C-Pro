@@ -1,0 +1,4 @@
+E:\AC_Victor\My\ConProgram\RemoteObject\bin\Debug\RemoteObject.dll
+E:\AC_Victor\My\ConProgram\RemoteObject\bin\Debug\RemoteObject.pdb
+E:\AC_Victor\My\ConProgram\RemoteObject\obj\Debug\RemoteObject.dll
+E:\AC_Victor\My\ConProgram\RemoteObject\obj\Debug\RemoteObject.pdb

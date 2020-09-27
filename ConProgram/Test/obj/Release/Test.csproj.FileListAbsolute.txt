@@ -1,0 +1,17 @@
+E:\AC_Victor\My\ConProgram\Test\bin\Release\Test.exe.config
+E:\AC_Victor\My\ConProgram\Test\bin\Release\Test.exe
+E:\AC_Victor\My\ConProgram\Test\bin\Release\Test.pdb
+E:\AC_Victor\My\ConProgram\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\Test\obj\Release\Test.exe
+E:\AC_Victor\My\ConProgram\Test\obj\Release\Test.pdb
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\Test.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Test\obj\Release\Test.exe
+E:\AC_Victor\My\Programer\ConProgram\Test\obj\Release\Test.pdb
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\Test.exe
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\Test.pdb
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\ChnCharInfo.dll
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\Newtonsoft.Json.dll
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\ChnCharInfo.xml
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\Newtonsoft.Json.xml
+E:\AC_Victor\My\Programer\ConProgram\Test\bin\Release\zh-CN\ChnCharInfo.resources.dll
+E:\AC_Victor\My\Programer\ConProgram\Test\obj\Release\Test.csprojResolveAssemblyReference.cache

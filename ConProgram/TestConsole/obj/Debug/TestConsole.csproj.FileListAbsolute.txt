@@ -1,0 +1,16 @@
+E:\AC_Victor\My\ConProgram\TestConsole\bin\Debug\TestConsole.exe.config
+E:\AC_Victor\My\ConProgram\TestConsole\bin\Debug\TestConsole.exe
+E:\AC_Victor\My\ConProgram\TestConsole\bin\Debug\TestConsole.pdb
+E:\AC_Victor\My\ConProgram\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\TestConsole\obj\Debug\TestConsole.exe
+E:\AC_Victor\My\ConProgram\TestConsole\obj\Debug\TestConsole.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\TestConsole.exe.config
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\TestConsole.exe
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\TestConsole.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Debug\TestConsole.exe
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Debug\TestConsole.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\Newtonsoft.Json.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\ICSharpCode.SharpZipLib.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Debug\ICSharpCode.SharpZipLib.xml

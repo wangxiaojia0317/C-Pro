@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\BaseNet\bin\Debug\BaseNet.exe.config
+E:\AC_Victor\My\ConProgram\BaseNet\bin\Debug\BaseNet.exe
+E:\AC_Victor\My\ConProgram\BaseNet\bin\Debug\BaseNet.pdb
+E:\AC_Victor\My\ConProgram\BaseNet\obj\Debug\BaseNet.exe
+E:\AC_Victor\My\ConProgram\BaseNet\obj\Debug\BaseNet.pdb
+E:\AC_Victor\My\ConProgram\BaseNet\obj\Debug\BaseNet.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\bin\Debug\BaseNet.exe.config
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\bin\Debug\BaseNet.exe
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\bin\Debug\BaseNet.pdb
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\obj\Debug\BaseNet.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\obj\Debug\BaseNet.exe
+E:\AC_Victor\My\Programer\ConProgram\BaseNet\obj\Debug\BaseNet.pdb

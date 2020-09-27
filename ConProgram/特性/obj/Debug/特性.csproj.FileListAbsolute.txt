@@ -1,0 +1,6 @@
+E:\AC_Victor\My\ConProgram\特性\bin\Debug\特性.exe.config
+E:\AC_Victor\My\ConProgram\特性\bin\Debug\特性.exe
+E:\AC_Victor\My\ConProgram\特性\bin\Debug\特性.pdb
+E:\AC_Victor\My\ConProgram\特性\obj\Debug\特性.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\特性\obj\Debug\特性.exe
+E:\AC_Victor\My\ConProgram\特性\obj\Debug\特性.pdb

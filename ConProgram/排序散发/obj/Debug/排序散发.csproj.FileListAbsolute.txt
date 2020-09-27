@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\排序散发\bin\Debug\排序散发.exe.config
+E:\AC_Victor\My\Programer\ConProgram\排序散发\bin\Debug\排序散发.exe
+E:\AC_Victor\My\Programer\ConProgram\排序散发\bin\Debug\排序散发.pdb
+E:\AC_Victor\My\Programer\ConProgram\排序散发\obj\Debug\排序散发.exe
+E:\AC_Victor\My\Programer\ConProgram\排序散发\obj\Debug\排序散发.pdb
+E:\AC_Victor\My\Programer\ConProgram\排序散发\obj\Debug\排序散发.csprojResolveAssemblyReference.cache

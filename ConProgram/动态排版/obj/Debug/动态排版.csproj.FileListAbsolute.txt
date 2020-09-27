@@ -1,0 +1,5 @@
+E:\AC_Victor\My\Programer\ConProgram\动态排版\bin\Debug\动态排版.exe.config
+E:\AC_Victor\My\Programer\ConProgram\动态排版\bin\Debug\动态排版.exe
+E:\AC_Victor\My\Programer\ConProgram\动态排版\bin\Debug\动态排版.pdb
+E:\AC_Victor\My\Programer\ConProgram\动态排版\obj\Debug\动态排版.exe
+E:\AC_Victor\My\Programer\ConProgram\动态排版\obj\Debug\动态排版.pdb

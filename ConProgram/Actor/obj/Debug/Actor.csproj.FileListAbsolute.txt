@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\Actor\bin\Debug\Actor.exe.config
+E:\AC_Victor\My\ConProgram\Actor\bin\Debug\Actor.exe
+E:\AC_Victor\My\ConProgram\Actor\bin\Debug\Actor.pdb
+E:\AC_Victor\My\ConProgram\Actor\obj\Debug\Actor.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\Actor\obj\Debug\Actor.exe
+E:\AC_Victor\My\ConProgram\Actor\obj\Debug\Actor.pdb
+E:\AC_Victor\My\Programer\ConProgram\Actor\bin\Debug\Actor.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Actor\bin\Debug\Actor.exe
+E:\AC_Victor\My\Programer\ConProgram\Actor\bin\Debug\Actor.pdb
+E:\AC_Victor\My\Programer\ConProgram\Actor\obj\Debug\Actor.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\Actor\obj\Debug\Actor.exe
+E:\AC_Victor\My\Programer\ConProgram\Actor\obj\Debug\Actor.pdb

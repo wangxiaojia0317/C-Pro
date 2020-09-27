@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\SystemInfo\bin\Debug\SystemInfo.exe.config
+E:\AC_Victor\My\ConProgram\SystemInfo\obj\Debug\SystemInfo.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\SystemInfo\bin\Debug\SystemInfo.exe
+E:\AC_Victor\My\ConProgram\SystemInfo\bin\Debug\SystemInfo.pdb
+E:\AC_Victor\My\ConProgram\SystemInfo\obj\Debug\SystemInfo.exe
+E:\AC_Victor\My\ConProgram\SystemInfo\obj\Debug\SystemInfo.pdb
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\bin\Debug\SystemInfo.exe.config
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\bin\Debug\SystemInfo.exe
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\bin\Debug\SystemInfo.pdb
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\obj\Debug\SystemInfo.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\obj\Debug\SystemInfo.exe
+E:\AC_Victor\My\Programer\ConProgram\SystemInfo\obj\Debug\SystemInfo.pdb

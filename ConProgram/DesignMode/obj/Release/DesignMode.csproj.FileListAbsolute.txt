@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\bin\Release\DesignMode.exe.config
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\bin\Release\DesignMode.exe
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\bin\Release\DesignMode.pdb
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\obj\Release\DesignMode.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\obj\Release\DesignMode.exe
+E:\AC_Victor\My\Programer\ConProgram\DesignMode\obj\Release\DesignMode.pdb

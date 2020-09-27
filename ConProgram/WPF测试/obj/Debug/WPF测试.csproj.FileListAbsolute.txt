@@ -1,0 +1,14 @@
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\bin\Debug\WPF测试.exe.config
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\MainWindow.g.cs
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\App.g.cs
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试_MarkupCompile.cache
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试_MarkupCompile.lref
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\bin\Debug\WPF测试.exe
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\bin\Debug\WPF测试.pdb
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\MainWindow.baml
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.g.resources
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.Properties.Resources.resources
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.csproj.GenerateResource.Cache
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.exe
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.pdb
+E:\AC_Victor\My\Programer\ConProgram\WPF测试\obj\Debug\WPF测试.csprojResolveAssemblyReference.cache

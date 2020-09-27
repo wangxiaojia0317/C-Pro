@@ -1,0 +1,7 @@
+E:\AC_Victor\My\Programer\ConProgram\Weather\bin\Debug\Weather.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Weather\obj\Debug\Weather.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\Weather\bin\Debug\Weather.exe
+E:\AC_Victor\My\Programer\ConProgram\Weather\bin\Debug\Weather.pdb
+E:\AC_Victor\My\Programer\ConProgram\Weather\obj\Debug\Weather.exe
+E:\AC_Victor\My\Programer\ConProgram\Weather\obj\Debug\Weather.pdb
+E:\AC_Victor\My\Programer\ConProgram\Weather\bin\Debug\Newtonsoft.Json.dll

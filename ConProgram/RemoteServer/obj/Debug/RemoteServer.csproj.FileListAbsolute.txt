@@ -1,0 +1,5 @@
+E:\AC_Victor\My\ConProgram\RemoteServer\bin\Debug\RemoteServer.exe.config
+E:\AC_Victor\My\ConProgram\RemoteServer\bin\Debug\RemoteServer.exe
+E:\AC_Victor\My\ConProgram\RemoteServer\bin\Debug\RemoteServer.pdb
+E:\AC_Victor\My\ConProgram\RemoteServer\obj\Debug\RemoteServer.exe
+E:\AC_Victor\My\ConProgram\RemoteServer\obj\Debug\RemoteServer.pdb

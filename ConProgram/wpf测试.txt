@@ -1,0 +1,205 @@
+<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" >
+    <Grid>
+        <TabControl Margin="5" TabStripPlacement="Top"  >
+
+
+            <TabItem Header="TabItem1" Name="TabItem1">
+                <Grid>
+
+                    <ComboBox Height="33" HorizontalAlignment="Right" Name="comboBox1" Width="142" SelectionChanged="Test_Com" Text="类型选项" Margin="0,139,258.2,110.4">
+                        <ComboBoxItem Background="LightGreen" Name="BoardPartItem">
+                            <TextBlock Text="小板" />
+                        </ComboBoxItem>
+
+                        <ComboBoxItem Background="LightGreen" Name="LeftOverPartItem">
+                            <TextBlock Text="余料" />
+                        </ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Height="33" HorizontalAlignment="Right" Name="comboBox2" Width="142" SelectionChanged="Test_Com" Text="类型选项" Margin="0,63,73.2,186.4">
+                        <ComboBoxItem Background="LightGreen" Name="content1">
+                            <TextBlock Text="小板" />
+                        </ComboBoxItem>
+
+                        <ComboBoxItem Background="LightGreen" Name="content2">
+                            <TextBlock Text="余料" />
+                        </ComboBoxItem>
+                    </ComboBox>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="TabItem2"  Name="TabItem2">
+                <TextBlock  Margin="3"  Text="选项卡2" VerticalAlignment="Center"/>
+            </TabItem>
+           
+        </TabControl>
+
+
+    </Grid>
+</Window>
+
+
+
+
+
+
+
+ #if true//wangxiaojia
+        /// <summary>
+        /// 类似清库功能
+        /// </summary>
+        public void UrgeOutput_Event()
+        {
+            string ExceptionBadPartRedisKey = "urn:SmartFactory:TransitManagerCenter:ExceptionBadPartRedisKey";
+            string BoardPartGotoWasteRedisKey = "urn:SmartFactory:TransitManagerCenter:BoardPartGotoWasteRedisKey";
+            if (MessageBox.Show("Delete this user?", "Confirm Message", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+            {
+                //排除已经安排出的+异常的板子
+                Log.d("异常情况紧急出库", "紧急出库.........");
+                //制作异常板件的补单记录
+                using (RedisClient client = RedisManager.Client)
+                using (client.AcquireLock(ExceptionBadPartRedisKey))
+                {
+                    var badPartIDs = client.As<PartWithLocation>().GetAll().Where(x => x.PartStatus == PartStatusEnum.Enter).Select(y => y.ID).ToList();
+                    try
+                    {
+                        TransitCenterMain.Instance.ReIssueOrderInforListRWLock.EnterReadLock();
+                        badPartIDs.RemoveAll(x => TransitCenterMain.Instance.ReIssueOrderInforList.Select(y => y.ID).ToList().Contains(x));//已经有补单记录的不再处理
+                        //已经安排出的也不再处理
+                        foreach (ArrayList item in TransitCenterMain.Instance.OutputManager)
+                        {
+                            lock (item.SyncRoot)
+                            {
+                                badPartIDs.RemoveAll(x => item.ToArray().ToList().Select(y => ((Part)y).ID).ToList().Contains(x));
+                            }
+                        }
+                    }
+                    finally
+                    {
+                        TransitCenterMain.Instance.ReIssueOrderInforListRWLock.ExitReadLock();
+                    }
+                    client.As<string>().Lists[ExceptionBadPartRedisKey].AddRange(badPartIDs.Distinct());
+                    Thread.Sleep(2000);
+                    client.PublishMessage(ExceptionBadPartRedisKey, "update");
+                }
+                Thread.Sleep(300000);
+                using (RedisClient client = RedisManager.Client)
+                using (client.AcquireLock(BoardPartGotoWasteRedisKey))
+                {
+                    using (client.AcquireLock(TransitCenterConfiguration.GetLockKey(BoardPartGotoWasteRedisKey)))
+                    {
+                        client.As<string>().Lists[BoardPartGotoWasteRedisKey].AddRange(client.As<string>().Lists[ExceptionBadPartRedisKey].GetAll());
+                        Thread.Sleep(2000);
+                        client.PublishMessage(BoardPartGotoWasteRedisKey, "update");
+                    }
+                } 
+            }
+        }
+
+        /// <summary>
+        /// 单板出
+        /// </summary>
+        /// <param name="id"></param>
+        public void UrgeOutput_Event(string id)
+        {
+            //已经外出安排的
+            //已经前往废料区的
+            //还未进库的
+            string ExceptionBadPartRedisKey = "urn:SmartFactory:TransitManagerCenter:ExceptionBadPartRedisKey";
+            string BoardPartGotoWasteRedisKey = "urn:SmartFactory:TransitManagerCenter:BoardPartGotoWasteRedisKey";
+            Compact.Assert(TransitCenterMain.Instance.AllPartManager.Select(x => x.ID).Contains(id),"系统中不存在此板子");
+            using (RedisClient client = RedisManager.Client)
+            {
+                var needOutPart = client.As<PartWithLocation>().GetAll().Where(x => x.PartStatus == PartStatusEnum.Enter).Where(y=>y.ID==id).FirstOrDefault();
+                if (needOutPart==null)
+                {
+                    MessageBox.Show("当前板子还未进库或者已经出库，请重新安排");
+                }
+            }
+            var info = TransitCenterMain.Instance.ReIssueOrderInforList.Where(x => x.ID == id).FirstOrDefault();
+            if (info!=null)
+            {
+                if (info.PartStatus==ReIssuePartReason.Empty)
+                {
+                    MessageBox.Show("当前板子为异常空板，无法安排出库");
+                    return;
+                }
+                else if (info.PartStatus == ReIssuePartReason.Bad)
+                {
+                    MessageBox.Show("当前板子为异常坏板，已经安排出库");
+                    return;
+                }
+            }
+            
+            bool flag = false;
+            foreach (ArrayList item in TransitCenterMain.Instance.OutputManager)
+            {
+                lock (item.SyncRoot)
+                {
+                    foreach (Part unit in item)
+                    {
+                        if (unit.ID==id)
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        break;
+                    }
+                }
+            }
+            if (flag)
+            {
+                MessageBox.Show("该板材已经在外出对列,请重新操作");
+                return;
+            }
+            else
+            {
+                using (RedisClient client = RedisManager.Client)
+                using (client.AcquireLock(ExceptionBadPartRedisKey))
+                {
+                    client.As<string>().Lists[ExceptionBadPartRedisKey].Add(id);
+                    Thread.Sleep(2000);
+                    client.PublishMessage(ExceptionBadPartRedisKey, "update");
+                    Thread.Sleep(10000);
+                    using (client.AcquireLock(BoardPartGotoWasteRedisKey))
+                    {
+                        client.As<string>().Lists[BoardPartGotoWasteRedisKey].Add(id);
+                        Thread.Sleep(2000);
+                        client.PublishMessage(BoardPartGotoWasteRedisKey, "update");
+                    }
+                }
+            }
+        }
+        #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

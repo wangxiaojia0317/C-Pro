@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\bin\Release\CPU内存监控工具.exe.config
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\bin\Release\CPU内存监控工具.exe
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\bin\Release\CPU内存监控工具.pdb
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\obj\Release\CPU内存监控工具.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\obj\Release\CPU内存监控工具.exe
+E:\AC_Victor\My\Programer\ConProgram\CPU内存监控工具\obj\Release\CPU内存监控工具.pdb

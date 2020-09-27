@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\ConProgram\bin\Debug\ConProgram.exe.config
+E:\AC_Victor\My\ConProgram\ConProgram\obj\Debug\ConProgram.exe
+E:\AC_Victor\My\ConProgram\ConProgram\obj\Debug\ConProgram.pdb
+E:\AC_Victor\My\ConProgram\ConProgram\bin\Debug\ConProgram.exe
+E:\AC_Victor\My\ConProgram\ConProgram\bin\Debug\ConProgram.pdb
+E:\AC_Victor\My\ConProgram\ConProgram\obj\Debug\正则表达式.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\bin\Debug\ConProgram.exe.config
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\obj\Debug\ConProgram.exe
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\obj\Debug\ConProgram.pdb
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\bin\Debug\ConProgram.exe
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\bin\Debug\ConProgram.pdb
+E:\AC_Victor\My\Programer\ConProgram\ConProgram\obj\Debug\正则表达式.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+E:\AC_Victor\My\Programer\ConProgram\PhotoRar\bin\Debug\PhotoRar.exe.config
+E:\AC_Victor\My\Programer\ConProgram\PhotoRar\bin\Debug\PhotoRar.exe
+E:\AC_Victor\My\Programer\ConProgram\PhotoRar\bin\Debug\PhotoRar.pdb
+E:\AC_Victor\My\Programer\ConProgram\PhotoRar\obj\Debug\PhotoRar.exe
+E:\AC_Victor\My\Programer\ConProgram\PhotoRar\obj\Debug\PhotoRar.pdb

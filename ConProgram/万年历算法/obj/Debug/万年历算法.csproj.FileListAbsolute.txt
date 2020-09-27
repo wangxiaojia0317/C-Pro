@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\bin\Debug\万年历算法.exe.config
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\bin\Debug\万年历算法.exe
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\bin\Debug\万年历算法.pdb
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\obj\Debug\万年历算法.exe
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\obj\Debug\万年历算法.pdb
+E:\AC_Victor\My\Programer\ConProgram\万年历算法\obj\Debug\万年历算法.csprojResolveAssemblyReference.cache

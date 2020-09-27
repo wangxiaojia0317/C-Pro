@@ -1,0 +1,10 @@
+E:\AC_Victor\My\ConProgram\FaceAzureWinform\bin\Debug\FaceAzureWinform.exe.config
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\bin\Debug\FaceAzureWinform.exe.config
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\bin\Debug\FaceAzureWinform.exe
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\bin\Debug\FaceAzureWinform.pdb
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.Form1.resources
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.Properties.Resources.resources
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.csproj.GenerateResource.Cache
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.exe
+E:\AC_Victor\My\Programer\ConProgram\FaceAzureWinform\obj\Debug\FaceAzureWinform.pdb

@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\bin\Debug\SoftRegister.exe.config
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\bin\Debug\SoftRegister.exe
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\bin\Debug\SoftRegister.pdb
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\obj\Debug\SoftRegister.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\obj\Debug\SoftRegister.exe
+E:\AC_Victor\My\Programer\ConProgram\SoftRegister\obj\Debug\SoftRegister.pdb

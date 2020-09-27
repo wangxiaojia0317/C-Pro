@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\IOC\bin\Debug\IOC.exe.config
+E:\AC_Victor\My\ConProgram\IOC\bin\Debug\IOC.exe
+E:\AC_Victor\My\ConProgram\IOC\bin\Debug\IOC.pdb
+E:\AC_Victor\My\ConProgram\IOC\obj\Debug\IOC.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\IOC\obj\Debug\IOC.exe
+E:\AC_Victor\My\ConProgram\IOC\obj\Debug\IOC.pdb
+E:\AC_Victor\My\Programer\ConProgram\IOC\bin\Debug\IOC.exe.config
+E:\AC_Victor\My\Programer\ConProgram\IOC\bin\Debug\IOC.exe
+E:\AC_Victor\My\Programer\ConProgram\IOC\bin\Debug\IOC.pdb
+E:\AC_Victor\My\Programer\ConProgram\IOC\obj\Debug\IOC.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\IOC\obj\Debug\IOC.exe
+E:\AC_Victor\My\Programer\ConProgram\IOC\obj\Debug\IOC.pdb

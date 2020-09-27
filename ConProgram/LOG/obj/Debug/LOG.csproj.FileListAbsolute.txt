@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\LOG\bin\Debug\LOG.exe.config
+E:\AC_Victor\My\Programer\ConProgram\LOG\bin\Debug\LOG.exe
+E:\AC_Victor\My\Programer\ConProgram\LOG\bin\Debug\LOG.pdb
+E:\AC_Victor\My\Programer\ConProgram\LOG\obj\Debug\LOG.exe
+E:\AC_Victor\My\Programer\ConProgram\LOG\obj\Debug\LOG.pdb
+E:\AC_Victor\My\Programer\ConProgram\LOG\obj\Debug\LOG.csprojResolveAssemblyReference.cache

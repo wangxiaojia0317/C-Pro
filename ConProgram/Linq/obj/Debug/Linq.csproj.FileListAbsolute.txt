@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\Linq\bin\Debug\Linq.exe.config
+E:\AC_Victor\My\ConProgram\Linq\bin\Debug\Linq.exe
+E:\AC_Victor\My\ConProgram\Linq\bin\Debug\Linq.pdb
+E:\AC_Victor\My\ConProgram\Linq\obj\Debug\Linq.exe
+E:\AC_Victor\My\ConProgram\Linq\obj\Debug\Linq.pdb
+E:\AC_Victor\My\ConProgram\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\Linq\bin\Debug\Linq.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Linq\bin\Debug\Linq.exe
+E:\AC_Victor\My\Programer\ConProgram\Linq\bin\Debug\Linq.pdb
+E:\AC_Victor\My\Programer\ConProgram\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\Linq\obj\Debug\Linq.exe
+E:\AC_Victor\My\Programer\ConProgram\Linq\obj\Debug\Linq.pdb

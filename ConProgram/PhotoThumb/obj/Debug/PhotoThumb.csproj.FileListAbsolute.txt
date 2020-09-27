@@ -1,0 +1,9 @@
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\bin\Debug\PhotoThumb.exe.config
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\bin\Debug\PhotoThumb.exe
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\bin\Debug\PhotoThumb.pdb
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.Form1.resources
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.Properties.Resources.resources
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.csproj.GenerateResource.Cache
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.exe
+E:\AC_Victor\My\Programer\ConProgram\PhotoThumb\obj\Debug\PhotoThumb.pdb

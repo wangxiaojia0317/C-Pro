@@ -1,0 +1,73 @@
+﻿<Window x:Class="WPF测试.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF测试"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" MaxHeight="1080" MaxWidth="1920" WindowStyle="SingleBorderWindow" ResizeMode="CanMinimize" >
+    <Grid>
+
+      
+        <TabControl Name="TabControlItem" Margin="0" TabStripPlacement="Top"  >
+
+            <TabItem Header="生产启动" Name="TabItem1" >
+                <!--<Grid>
+                    <Viewbox Margin="0,0,0,0" Stretch="Fill" Name="Viewbox1">
+                        <Grid Width="1920" Height="1080" Background="AliceBlue" Name="ViewboxGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200"></RowDefinition>
+                                <RowDefinition Height="200"></RowDefinition>
+                                <RowDefinition Height="200"></RowDefinition>
+                                <RowDefinition Height="200"></RowDefinition>
+                                <RowDefinition Height="200"></RowDefinition>
+                               
+
+                            </Grid.RowDefinitions>
+                            <Button Content="左上" FontSize="50" Grid.Column="1" Grid.Row="0" Name="butt"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="0" Grid.Row="1"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="0" Grid.Row="2"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="0" Grid.Row="3"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="0" Grid.Row="4"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="1" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="2" Grid.Row="0"></Button>
+                            
+
+                            <Button Content="左上" FontSize="50" Grid.Column="3" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="4" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="5" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="6" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="7" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="8" Grid.Row="0"></Button>
+                            <Button Content="左上" FontSize="50" Grid.Column="9" Grid.Row="0"></Button>
+
+                        </Grid>
+                    </Viewbox>
+                </Grid>-->
+
+            </TabItem>
+
+
+            <TabItem Header="运行恢复"  Name="TabItem2">
+                <Grid>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="36,67,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged"/>
+                    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="221,78,0,0" VerticalAlignment="Top" Width="75"/>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

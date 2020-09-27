@@ -1,0 +1,10 @@
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteClient.exe.config
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteClient.exe
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteClient.pdb
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteObject.dll
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteServer.exe
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteObject.pdb
+E:\AC_Victor\My\ConProgram\RemoteClient\bin\Debug\RemoteServer.pdb
+E:\AC_Victor\My\ConProgram\RemoteClient\obj\Debug\RemoteClient.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\RemoteClient\obj\Debug\RemoteClient.exe
+E:\AC_Victor\My\ConProgram\RemoteClient\obj\Debug\RemoteClient.pdb

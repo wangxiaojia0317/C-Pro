@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.exe.config
+E:\AC_Victor\My\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.exe
+E:\AC_Victor\My\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.pdb
+E:\AC_Victor\My\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.exe
+E:\AC_Victor\My\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.pdb
+E:\AC_Victor\My\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.exe.config
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.exe
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.pdb
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.exe
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\bin\Debug\多线程断点续传.pdb
+E:\AC_Victor\My\Programer\ConProgram\多线程断点续传\obj\Debug\多线程断点续传.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\bin\Release\DeviceInfo.exe.config
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\bin\Release\DeviceInfo.exe
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\bin\Release\DeviceInfo.pdb
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\obj\Release\DeviceInfo.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\obj\Release\DeviceInfo.exe
+E:\AC_Victor\My\Programer\ConProgram\DeviceInfo\obj\Release\DeviceInfo.pdb

@@ -1,0 +1,12 @@
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\TestConsole.exe.config
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\TestConsole.exe
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\TestConsole.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\Newtonsoft.Json.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\UnityEngine.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\UnityEngine.CoreModule.dll
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\ICSharpCode.SharpZipLib.pdb
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\bin\Release\ICSharpCode.SharpZipLib.xml
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Release\TestConsole.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Release\TestConsole.exe
+E:\AC_Victor\My\Programer\ConProgram\TestConsole\obj\Release\TestConsole.pdb

@@ -1,0 +1,6 @@
+D:\My\ConProgram\ConProgram\bin\Debug\ConProgram.exe.config
+D:\My\ConProgram\ConProgram\bin\Debug\ConProgram.exe
+D:\My\ConProgram\ConProgram\bin\Debug\ConProgram.pdb
+D:\My\ConProgram\ConProgram\obj\Debug\ConProgram.csprojResolveAssemblyReference.cache
+D:\My\ConProgram\ConProgram\obj\Debug\ConProgram.exe
+D:\My\ConProgram\ConProgram\obj\Debug\ConProgram.pdb

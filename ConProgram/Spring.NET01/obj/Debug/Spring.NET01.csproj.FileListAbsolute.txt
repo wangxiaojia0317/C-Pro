@@ -1,0 +1,17 @@
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.exe.config
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.exe
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.pdb
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Newtonsoft.Json.dll
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Spring.Core.dll
+E:\AC_Victor\My\ConProgram\Spring.NET01\bin\Debug\Newtonsoft.Json.xml
+E:\AC_Victor\My\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.exe
+E:\AC_Victor\My\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.pdb
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.exe
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\bin\Debug\Spring.NET01.pdb
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\bin\Debug\Newtonsoft.Json.dll
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\bin\Debug\Newtonsoft.Json.xml
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.exe
+E:\AC_Victor\My\Programer\ConProgram\Spring.NET01\obj\Debug\Spring.NET01.pdb

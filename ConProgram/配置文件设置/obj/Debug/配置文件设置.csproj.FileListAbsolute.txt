@@ -1,0 +1,5 @@
+E:\AC_Victor\My\Programer\ConProgram\配置文件设置\bin\Debug\配置文件设置.exe.config
+E:\AC_Victor\My\Programer\ConProgram\配置文件设置\bin\Debug\配置文件设置.exe
+E:\AC_Victor\My\Programer\ConProgram\配置文件设置\bin\Debug\配置文件设置.pdb
+E:\AC_Victor\My\Programer\ConProgram\配置文件设置\obj\Debug\配置文件设置.exe
+E:\AC_Victor\My\Programer\ConProgram\配置文件设置\obj\Debug\配置文件设置.pdb

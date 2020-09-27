@@ -1,0 +1,6 @@
+E:\AC_Victor\My\ConProgram\爬虫\bin\Debug\爬虫.exe.config
+E:\AC_Victor\My\Programer\ConProgram\爬虫\bin\Debug\爬虫.exe.config
+E:\AC_Victor\My\Programer\ConProgram\爬虫\bin\Debug\爬虫.exe
+E:\AC_Victor\My\Programer\ConProgram\爬虫\bin\Debug\爬虫.pdb
+E:\AC_Victor\My\Programer\ConProgram\爬虫\obj\Debug\爬虫.exe
+E:\AC_Victor\My\Programer\ConProgram\爬虫\obj\Debug\爬虫.pdb

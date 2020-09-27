@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.exe.config
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.exe
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.pdb
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.exe
+E:\AC_Victor\My\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.pdb
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.exe.config
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.exe
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\bin\Debug\DeleteAndEvent.pdb
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.exe
+E:\AC_Victor\My\Programer\ConProgram\DeleteAndEvent\obj\Debug\DeleteAndEvent.pdb

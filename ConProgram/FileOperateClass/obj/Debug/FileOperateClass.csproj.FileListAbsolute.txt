@@ -1,0 +1,10 @@
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\FileOperateClass.exe.config
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\FileOperateClass.exe
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\FileOperateClass.pdb
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\obj\Debug\FileOperateClass.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\obj\Debug\FileOperateClass.exe
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\obj\Debug\FileOperateClass.pdb
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\Newtonsoft.Json.dll
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\ICSharpCode.SharpZipLib.pdb
+E:\AC_Victor\My\Programer\ConProgram\FileOperateClass\bin\Debug\ICSharpCode.SharpZipLib.xml

@@ -1,0 +1,12 @@
+E:\AC_Victor\My\ConProgram\Pointer\bin\Debug\Pointer.exe.config
+E:\AC_Victor\My\ConProgram\Pointer\bin\Debug\Pointer.exe
+E:\AC_Victor\My\ConProgram\Pointer\bin\Debug\Pointer.pdb
+E:\AC_Victor\My\ConProgram\Pointer\obj\Debug\Pointer.csprojResolveAssemblyReference.cache
+E:\AC_Victor\My\ConProgram\Pointer\obj\Debug\Pointer.exe
+E:\AC_Victor\My\ConProgram\Pointer\obj\Debug\Pointer.pdb
+E:\AC_Victor\My\Programer\ConProgram\Pointer\bin\Debug\Pointer.exe.config
+E:\AC_Victor\My\Programer\ConProgram\Pointer\obj\Debug\Pointer.exe
+E:\AC_Victor\My\Programer\ConProgram\Pointer\obj\Debug\Pointer.pdb
+E:\AC_Victor\My\Programer\ConProgram\Pointer\bin\Debug\Pointer.exe
+E:\AC_Victor\My\Programer\ConProgram\Pointer\bin\Debug\Pointer.pdb
+E:\AC_Victor\My\Programer\ConProgram\Pointer\obj\Debug\Pointer.csprojResolveAssemblyReference.cache

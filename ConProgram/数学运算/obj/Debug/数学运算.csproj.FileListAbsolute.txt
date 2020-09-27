@@ -1,0 +1,10 @@
+E:\AC_Victor\My\ConProgram\数学运算\bin\Debug\数学运算.exe.config
+E:\AC_Victor\My\ConProgram\数学运算\bin\Debug\数学运算.exe
+E:\AC_Victor\My\ConProgram\数学运算\bin\Debug\数学运算.pdb
+E:\AC_Victor\My\ConProgram\数学运算\obj\Debug\数学运算.exe
+E:\AC_Victor\My\ConProgram\数学运算\obj\Debug\数学运算.pdb
+E:\AC_Victor\My\Programer\ConProgram\数学运算\bin\Debug\数学运算.exe.config
+E:\AC_Victor\My\Programer\ConProgram\数学运算\bin\Debug\数学运算.exe
+E:\AC_Victor\My\Programer\ConProgram\数学运算\bin\Debug\数学运算.pdb
+E:\AC_Victor\My\Programer\ConProgram\数学运算\obj\Debug\数学运算.exe
+E:\AC_Victor\My\Programer\ConProgram\数学运算\obj\Debug\数学运算.pdb

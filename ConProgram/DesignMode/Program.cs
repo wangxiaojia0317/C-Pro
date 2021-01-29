@@ -10,1007 +10,625 @@ namespace DesignMode
     {
         static void Main(string[] args)
         {
-            Custom_Decorator c = new Custom_Decorator();
-            c.Demo();
+           
             Console.Read();
         }
     }
 
-    
-    
-    #region 单例
-    public class Singleton
+
+    #region 23种设计模式
+    /*
+     23种设计模式，简单demo实现，只作为理解的基础，后期会写入框架中
+     本次以加强理解为基础，一加强理解为主，该有的抽象还是要有的，会作为common组件运用到实例中，一定要熟悉其中的原里并且会运用
+     */
+
+    #region 单例模式
+    public class SingleTon<T> where T : class
     {
-        private static Singleton instance;
-        private static readonly object locker = new object();
-        private Singleton()
-        { }
-
-
-        public static Singleton GetInstance()
+        private static T instance;
+        private static object locker = new object();
+        public static T Instance
         {
-            if (instance==null)
+            get
             {
-                lock (locker)
+                if (instance == null)
                 {
-                    if (instance==null)
+                    lock (locker)
                     {
-                        instance = new Singleton();
+                        if (instance == null)
+                        {
+                            Type t = typeof(T);
+                            //确保不会被new到
+                            System.Reflection.ConstructorInfo[] ctors = t.GetConstructors();
+                            if (ctors.Length > 0)
+                            {
+                                throw new InvalidOperationException(String.Format("{0} has at least one accesible ctor making it impossibleto enforce DyhSingleton behaviour", t.Name));
+                            }
+                            instance = (T)Activator.CreateInstance(t, true);
+                        }
                     }
                 }
+                return instance;
             }
-            return instance;
         }
 
+    }
+
+    public class A : SingleTon<A>
+    {
+        public void Read()
+        {
+            Console.WriteLine("KSJFHK");
+        }
+        //添加私有构造，防止被实例化
+        private A()
+        {
+
+        }
     }
     #endregion
 
+    #region 抽像工厂模式
 
-    #region 简单工厂
-    /// <summary>
-    /// 需要创建的类
-    /// 工厂是单一的
-    /// </summary>
-    public abstract class Food
+    /*
+    所谓的抽象工厂其实就是抽象出来一个工厂类，这个抽象的工厂只是提供抽象的产品作为一个产品的产品族 
+         
+         
+    */
+    public abstract class AbstractFactory
     {
-        public abstract void Print();
+        public abstract AbstractProductA CreateProductA();
+        public abstract AbstractProductB CreateProductB();
     }
 
-    /// <summary>
-    /// 西红柿炒鸡蛋这道菜
-    /// </summary>
-    public class TomatoScrambledEggs : Food
+    public interface IAbstractProduct
     {
-        public override void Print()
+
+    }
+    public abstract class AbstractProductA : IAbstractProduct
+    {
+        public abstract void Interact(IAbstractProduct product);
+    }
+
+    public abstract class AbstractProductB : IAbstractProduct
+    {
+        public abstract void Interact(IAbstractProduct product);
+    }
+
+
+
+    public class ProductA : AbstractProductA
+    {
+        public override void Interact(IAbstractProduct product)
         {
-            Console.WriteLine("一份西红柿炒蛋！");
+            Console.WriteLine("具体的产品A逻辑");
         }
     }
 
-    /// <summary>
-    /// 土豆肉丝这道菜
-    /// </summary>
-    public class ShreddedPorkWithPotatoes : Food
+    public class ProductB : AbstractProductB
     {
-        public override void Print()
+        public override void Interact(IAbstractProduct product)
         {
-            Console.WriteLine("一份土豆肉丝");
+            Console.WriteLine("具体的产品B逻辑");
         }
     }
 
-    /// <summary>
-    /// 工厂类
-    /// </summary>
-    public class FoodSimpleFactory
+    //不同的工厂生产的产品的类型是一样的，但是规格是不一样的，这也就是差异化
+    public class FactoryA : AbstractFactory
     {
-        public static Food CreateFood(string type)
+        public override AbstractProductA CreateProductA()
         {
-            Food food = null;
-            if (type.Equals("土豆肉丝"))
-            {
-                food = new ShreddedPorkWithPotatoes();
-            }
-            else if (type.Equals("西红柿炒蛋"))
-            {
-                food = new TomatoScrambledEggs();
-            }
-
-            return food;
+            return new ProductA();
         }
 
-    }
-
-    /// <summary>
-    /// 测试
-    /// </summary>
-    class Customer_FoodSimpleFactory
-    {
-        void Demo()
+        public override AbstractProductB CreateProductB()
         {
-            Food food1 = FoodSimpleFactory.CreateFood("");
-            food1.Print();
+            return new ProductB();
         }
     }
 
+    public class FactoryB : AbstractFactory
+    {
+        public override AbstractProductA CreateProductA()
+        {
+            return new ProductA();
+        }
+
+        public override AbstractProductB CreateProductB()
+        {
+            return new ProductB();
+        }
+    }
 
 
 
 
     #endregion
-
 
     #region 工厂方法模式
-    /// <summary>
-    /// 工厂分类
-    /// 
-    /// </summary>
-    public abstract class Food_SmartFactoryMethod
+    /*
+     不需要知道它的具体的实现产品，但是必须知道谁生产的，并且可以创建的对象
+     由 中间者去执行相关的操作
+     */
+
+    public abstract class CarFactory
     {
-        public abstract void Print();
+        public abstract Car CreateCar();
     }
 
-    /// <summary>
-    /// 西红柿炒鸡蛋这道菜
-    /// </summary>
-    public class TomatoScrambledEggs_SmartFactoryMethod : Food_SmartFactoryMethod
+    public abstract class Car
     {
-        public override void Print()
+        public abstract void StartUp();
+
+        public abstract void Run();
+
+        public abstract void Stop();
+    }
+
+
+    public class HongQiFactory : CarFactory
+    {
+        public override Car CreateCar()
         {
-            Console.WriteLine("西红柿炒蛋好了！");
+            return new HongQiCar();
         }
     }
 
-    /// <summary>
-    /// 土豆肉丝这道菜
-    /// </summary>
-    public class ShreddedPorkWithPotatoes_SmartFactoryMethod : Food_SmartFactoryMethod
+    public class HongQiCar : Car
     {
-        public override void Print()
+        public override void Run()
         {
-            Console.WriteLine("土豆肉丝好了");
-        }
-    }
-
-
-
-
-
-
-    public abstract class Creator_SmartFactoryMethod
-    {
-        public abstract Food_SmartFactoryMethod CreatorFoodFactory();
-    }
-
-    /// <summary>
-    /// 西红柿炒蛋工厂类
-    /// </summary>
-    public class TomatoScrambledEggsFactory_SmartFactoryMethod : Creator_SmartFactoryMethod
-    {
-        public override Food_SmartFactoryMethod CreatorFoodFactory()
-        {
-            return new TomatoScrambledEggs_SmartFactoryMethod();
-        }
-    }
-
-    /// <summary>
-    /// 土豆肉丝工厂类
-    /// </summary>
-    public class ShreddedPorkWithPotatoesFactory : Creator_SmartFactoryMethod
-    {
-        public override Food_SmartFactoryMethod CreatorFoodFactory()
-        {
-            return new ShreddedPorkWithPotatoes_SmartFactoryMethod();
-        }
-    }
-
-    class Customer__SmartFactoryMethod
-    {
-        void Demo()
-        {
-            Creator_SmartFactoryMethod shreddedPorkWithPotatoesFactory = new ShreddedPorkWithPotatoesFactory();
-            Food_SmartFactoryMethod shareFood = shreddedPorkWithPotatoesFactory.CreatorFoodFactory();
-            shareFood.Print();
-        }
-      
-    }
-
-
-    #endregion
-
-
-    #region 抽象工场
-    /// <summary>
-    /// 工厂分类，功能分类
-    /// </summary>
-    public abstract class AbstarctFactory
-    {
-        public abstract YaBo CreateYaBo();
-        public abstract YaJia CreateYaJia();
-    }
-
-    public class NanChangFactory : AbstarctFactory
-    {
-        public override YaBo CreateYaBo()
-        {
-            return new NanJingYaBo();
+            throw new NotImplementedException();
         }
 
-        public override YaJia CreateYaJia()
+        public override void StartUp()
         {
-            return new NanJingYaJia();
-        }
-    }
-
-
-    public class ShangHaiFactory : AbstarctFactory
-    {
-        public override YaBo CreateYaBo()
-        {
-            return new ShangHaiJingYaBo();
+            throw new NotImplementedException();
         }
 
-        public override YaJia CreateYaJia()
+        public override void Stop()
         {
-            return new ShangHaiJingYaJia();
-        }
-    }
-
-
-    public abstract class YaBo
-    {
-        public abstract void Print();
-    }
-    public abstract class YaJia
-    {
-        public abstract void Print();
-    }
-
-    public class NanJingYaBo : YaBo
-    {
-        public override void Print()
-        {
-            Console.WriteLine("这是南京鸭脖");
-        }
-    }
-
-    public class ShangHaiJingYaBo : YaBo
-    {
-        public override void Print()
-        {
-            Console.WriteLine("这是上海鸭脖");
-        }
-    }
-
-    public class NanJingYaJia : YaJia
-    {
-        public override void Print()
-        {
-            Console.WriteLine("这是南京鸭架");
-        }
-    }
-
-    public class ShangHaiJingYaJia : YaJia
-    {
-        public override void Print()
-        {
-            Console.WriteLine("这是上海鸭架");
-        }
-    }
-
-
-
-    class Customer_AbstractFactory
-    {
-        void Demo()
-        {
-            AbstarctFactory nanJingFactory = new NanChangFactory();
-            YaBo nanJingYaBo =  nanJingFactory.CreateYaBo();
-            nanJingYaBo.Print();
-            YaJia nanJingYaJia = nanJingFactory.CreateYaJia();
-            nanJingYaJia.Print();
+            throw new NotImplementedException();
         }
     }
 
     #endregion
 
     #region 建造者模式
+    /*
+     实际上就是系统并不是一成不变的，但是也要尽量避免改变导致大的系统的变动，需要的变动只需要在子系统中去变动即可
+     */
+
+    //可以用在资源加载等有顺序要求的地方
+    public abstract class Builder
+    {
+        public abstract void BuildDoor();
+
+        public abstract void BuildWall();
+
+        public abstract void BuildWindows();
+
+        public abstract void BuildFollr();
+
+    }
+
     public class Director
     {
-        public void Construct(Builder builder)
+        //按照顺序执行，一定是有严格的顺序
+        public Director(Builder builder)
         {
-            builder.BuildPartCPU();
-            builder.BuildPartMainBoard();
+            builder.BuildDoor();
+            builder.BuildFollr();
+            builder.BuildWall();
+            builder.BuildWindows();
         }
     }
 
-    public abstract class Builder
-     {
-         // 装CPU
-         public abstract void BuildPartCPU();
-         // 装主板
-         public abstract void BuildPartMainBoard();
-         
-         // 当然还有装硬盘，电源等组件，这里省略
- 
-         // 获得组装好的电脑
-         public abstract Computer GetComputer();
-     }
-
-
-
-    public class Computer
+    public class ChineseBuilder : Builder
     {
-        public List<string> paras = new List<string>();
-        public void Add(string part)
+        public override void BuildDoor()
         {
-            paras.Add(part);
+            throw new NotImplementedException();
         }
 
-
-        public void Show()
+        public override void BuildFollr()
         {
-            foreach (string part in paras)
-            {
-                Console.WriteLine("组件" + part + "已装好");
-            }
-            Console.WriteLine("电脑组装好了");
+            throw new NotImplementedException();
         }
 
+        public override void BuildWall()
+        {
+            throw new NotImplementedException();
+        }
 
-       
-
+        public override void BuildWindows()
+        {
+            throw new NotImplementedException();
+        }
     }
-    public class ConcreteBuilder1 : Builder
+
+    public class DemoBuilder
     {
-        Computer computer = new Computer();
-        public override void BuildPartCPU()
+        public void DemoTest()
         {
-            computer.Add("CPU1");
+            ChineseBuilder cBuilder = new ChineseBuilder();
+            Director d = new Director(cBuilder);
+
         }
 
-        public override void BuildPartMainBoard()
-        {
-            computer.Add("MainBoard1");
-        }
-
-        public override Computer GetComputer()
-        {
-            return computer;
-        }
     }
 
-    public class ConcreteBuilder2 : Builder
+    #endregion
+
+    #region 原型模式
+    /*
+     将模板保存，然后复制成新的对象
+     创建抽象类，使用其拷贝
+     */
+
+    public abstract class NormalActor
     {
-        Computer computer = new Computer();
-        public override void BuildPartCPU()
-        {
-            computer.Add("CPU2");
-        }
-
-        public override void BuildPartMainBoard()
-        {
-            computer.Add("MainBoard2");
-        }
-
-        public override Computer GetComputer()
-        {
-            return computer;
-        }
+        public abstract NormalActor Clone();
     }
-    public class Custom_Constructor
+
+    public class NormalActorA : NormalActor
     {
-        void Demo()
+        public override NormalActor Clone()
         {
-            Director director = new Director();
-            Builder b1 = new ConcreteBuilder1();
-            Builder b2 = new ConcreteBuilder2();
-           
-             // 老板叫员工去组装第一台电脑
-             director.Construct(b1);
-         
-             // 组装完，组装人员搬来组装好的电脑
-             Computer computer1 = b1.GetComputer();
-             computer1.Show();
-        
-             // 老板叫员工去组装第二台电脑
-             director.Construct(b2);
-             Computer computer2 = b2.GetComputer();
-             computer2.Show();
-           
+            return (NormalActor)this.MemberwiseClone();
         }
     }
+
 
     #endregion
 
     #region 适配器模式
-    public interface IThreeHole
+    /*
+     使用现有的类进行复用，
+     */
+
+    public interface IMediaPlayer
     {
-        void Request();
+        void Play();
     }
 
-    public abstract class TwoHole
+    public interface IAdvanceMediaPlayer
     {
-        public void SpecificRequest()
+        void PlayVcr();
+        void PlayMp4();
+    }
+
+    public class VcrPlayer : IAdvanceMediaPlayer
+    {
+        public void PlayMp4()
         {
-            Console.WriteLine("我是两个头的插孔");
+            throw new NotImplementedException();
+        }
+
+        public void PlayVcr()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Mp4Player : IAdvanceMediaPlayer
+    {
+        public void PlayMp4()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PlayVcr()
+        {
+            throw new NotImplementedException();
         }
     }
 
 
-    public class PowerAdapter : TwoHole, IThreeHole
+    public class MediaAdapter : IMediaPlayer
     {
-        public void Request()
+        IAdvanceMediaPlayer advanceMediaPlayer;
+        int f = 0;
+        public MediaAdapter(int flag)
         {
-            this.SpecificRequest();
+            f = flag;
+            switch (flag)
+            {
+                case 0:
+                    advanceMediaPlayer = new VcrPlayer();
+                    break;
+                case 1:
+                    advanceMediaPlayer = new Mp4Player();
+                    break;
+            }
+
+        }
+
+        public void Play()
+        {
+            switch (f)
+            {
+                case 0:
+                    advanceMediaPlayer.PlayVcr();
+                    break;
+                case 1:
+                    advanceMediaPlayer.PlayMp4();
+                    break;
+            }
+
+        }
+    }
+
+
+    public class AudioPlayer : IMediaPlayer
+    {
+        MediaAdapter mediaAdapter;
+        int a = 0;
+        public void Play()
+        {
+            if (a == 0)
+            {
+                Console.WriteLine("skfhdsklfhk");
+            }
+            else if (a == 1)
+            {
+                mediaAdapter = new MediaAdapter(0);
+                mediaAdapter.Play();
+            }
+            else
+            {
+
+            }
         }
     }
 
     #endregion
 
-
     #region 桥接模式
-    public class RemoteControl
+    /*
+     所谓的桥接模式其实就是不同的对象之间的排列组合，可以参考抽象工厂模式生产的产品与其他的场子生产的产品都被放在同一个商场里面
+     
+     */
+
+    interface IDrawingAPI
     {
-        private TV implementor;
-
-        public TV Implementor
+        void DrawCircle(double x, double y, double radius);
+    }  /** "ConcreteImplementor" 1/2 */
+    class DrawingAPI1 : IDrawingAPI
+    {
+        public void DrawCircle(double x, double y, double radius)
         {
-            get
-            {
-                return implementor;
-            }
-
-            set
-            {
-                implementor = value;
-            }
+            System.Console.WriteLine("API1.circle at {0}:{1} radius {2}", x, y, radius);
         }
-
-
-        public virtual void On()
+    }  /** "ConcreteImplementor" 2/2 */
+    class DrawingAPI2 : IDrawingAPI
+    {
+        public void DrawCircle(double x, double y, double radius)
         {
-            implementor.On();
+            System.Console.WriteLine("API2.circle at {0}:{1} radius {2}", x, y, radius);
         }
-
-        public virtual void Off()
+    }  /** "Abstraction" */
+    interface IShape
+    {
+        void Draw();                             // low-level (i.e. Implementation-specific) 
+        void ResizeByPercentage(double pct);     // high-level (i.e. Abstraction-specific) 
+    }  /** "Refined Abstraction" */
+    class CircleShape : IShape
+    {
+        private double x, y, radius;
+        private IDrawingAPI drawingAPI;
+        public CircleShape(double x, double y, double radius, IDrawingAPI drawingAPI)
         {
-            implementor.Off();
-        }
-
-        public virtual void SetChannel()
+            this.x = x; this.y = y; this.radius = radius;
+            this.drawingAPI = drawingAPI;
+        }    // low-level (i.e. Implementation-specific)   
+        public void Draw()
         {
-            implementor.TurnChannel();
+            drawingAPI.DrawCircle(x, y, radius);
+        }    // high-level (i.e. Abstraction-specific)  
+        public void ResizeByPercentage(double pct)
+        {
+            radius *= pct;
         }
     }
-
-    public abstract class TV
-    {
-        public abstract void On();
-        public abstract void Off();
-        public abstract void TurnChannel();
-
-    }
-    public class ConcreteRemote : RemoteControl
-    {
-        public override void SetChannel()
-        {
-            base.SetChannel();
-        }
-    }
-
-    public class ChangHong : TV
-    {
-        public override void Off()
-        {
-            Console.WriteLine("长虹电视关闭了");
-        }
-
-        public override void On()
-        {
-            Console.WriteLine("长虹电视打开了");
-        }
-
-        public override void TurnChannel()
-        {
-            Console.WriteLine("长虹电视换频道了");
-        }
-    }
-    public class Samsung : TV
-    {
-        public override void Off()
-        {
-            Console.WriteLine("三星电视关闭了");
-        }
-
-        public override void On()
-        {
-            Console.WriteLine("三星电视打开了");
-        }
-
-        public override void TurnChannel()
-        {
-            Console.WriteLine("三星电视换频道了");
-        }
-    }
-
-
-    public class Custom_Remote
-    {
-        public void Demo()
-        {
-            RemoteControl r = new RemoteControl();
-            r.Implementor = new ChangHong();
-            r.On();
-            r.SetChannel();
-            r.Off();
-            // 三星牌电视机
-            r.Implementor = new Samsung();
-            r.On();
-            r.SetChannel();
-            r.Off();
-        }
-    }
-
 
     #endregion
 
     #region 装饰者模式
-    public abstract class Phone
+
+    public abstract class Tank
     {
-        public abstract void Print();
+        public abstract void Shot();
+        public abstract void Run();
     }
 
-    public class ApplePhone : Phone
+    public abstract class Decorator : Tank
     {
-        public override void Print()
+        protected Tank tank;
+        public Decorator(Tank t)
         {
-            Console.WriteLine("开始执行具体的对象——苹果手机");
-        }
-    }
-
-    public abstract class Decorator : Phone
-    {
-        private Phone phone;
-        public Decorator(Phone p)
-        {
-            this.phone = p;
+            this.tank = t;
         }
 
-        public override void Print()
+        public override void Shot()
         {
-            if (phone!=null)
-            {
-                phone.Print();
-            }
+            tank.Shot();
+        }
+
+        public override void Run()
+        {
+            tank.Run();
         }
     }
 
-    public class Sticker : Decorator
+    public class DecoratorA : Decorator
     {
-        public Sticker(Phone p) : base(p)
-        {
 
+
+        public override void Shot()
+        {
+            //扩展的功能
+            tank.Shot();
         }
 
-        public override void Print()
+        public override void Run()
         {
-            base.Print();
-            Addsticker();
-
+            //扩展的功能
+            tank.Run();
         }
-        public void Addsticker()
+
+        public DecoratorA(Tank t) : base(t)
         {
-            Console.WriteLine("现在苹果手机贴膜了");
         }
     }
 
-    public class Accessroies : Decorator
-    {
-        public Accessroies(Phone p) : base(p)
-        {
-
-        }
-
-        public override void Print()
-        {
-            base.Print();
-            AddAccessories();
-        }
-
-        public void AddAccessories()
-        {
-            Console.WriteLine("现在苹果手机有漂亮的挂件了");
-        }
 
 
-    }
 
-
-    public class Custom_Decorator
-    {
-        public void Demo()
-        {
-            // 我买了个苹果手机
-            Phone phone = new ApplePhone();
-
-            //// 现在想贴膜了
-            //Decorator applePhoneWithSticker = new Sticker(phone);
-            //// 扩展贴膜行为
-            //applePhoneWithSticker.Print();
-            //Console.WriteLine("----------------------\n");
-
-            //// 现在我想有挂件了
-            //Decorator applePhoneWithAccessories = new Accessroies(phone);
-            //// 扩展手机挂件行为
-            //applePhoneWithAccessories.Print();
-            //Console.WriteLine("----------------------\n");
-
-            // 现在我同时有贴膜和手机挂件了
-            Sticker  sticker = new Sticker(phone);
-            Accessroies applePhoneWithAccessoriesAndSticker = new Accessroies(sticker);
-            applePhoneWithAccessoriesAndSticker.Print();
-         
-        }
-    }
 
 
     #endregion
 
     #region 组合模式
-    public abstract class Graphics
-    {
-        public string Name { get; set; }
-
-        public Graphics(string name)
-        {
-            this.Name = name;
-        }
-        public abstract void Draw();
-
-        public abstract void Add(Graphics g);
-
-        public abstract void Remove(Graphics g);
-    }
-
-
-    public class Line : Graphics
-    {
-        public Line(string name) : base(name)
-        {
-        }
-
-        // 重写父类抽象方法
-        public override void Draw()
-        {
-            Console.WriteLine("画  " + Name);
-        }
-        // 因为简单图形在添加或移除其他图形，所以简单图形Add或Remove方法没有任何意义
-        // 如果客户端调用了简单图形的Add或Remove方法将会在运行时抛出异常
-        // 我们可以在客户端捕获该类移除并处理
-        public override void Add(Graphics g)
-        {
-            throw new Exception("不能向简单图形Line添加其他图形");
-        }
-        public override void Remove(Graphics g)
-        {
-            throw new Exception("不能向简单图形Line移除其他图形");
-        }
-    }
-
-    public class Circle : Graphics
-    {
-        public Circle(string name)
-            : base(name)
-        { }
-
-        // 重写父类抽象方法
-        public override void Draw()
-        {
-            Console.WriteLine("画  " + Name);
-        }
-
-        public override void Add(Graphics g)
-        {
-            throw new Exception("不能向简单图形Circle添加其他图形");
-        }
-        public override void Remove(Graphics g)
-        {
-            throw new Exception("不能向简单图形Circle移除其他图形");
-        }
-    }
-
-
-    /// <summary>
-    /// 复杂图形，由一些简单图形组成,这里假设该复杂图形由一个圆两条线组成的复杂图形
-    /// </summary>
-    public class ComplexGraphics : Graphics
-    {
-        private List<Graphics> complexGraphicsList = new List<Graphics>();
-
-        public ComplexGraphics(string name)
-            : base(name)
-        { }
-
-        /// <summary>
-        /// 复杂图形的画法
-        /// </summary>
-        public override void Draw()
-        {
-            foreach (Graphics g in complexGraphicsList)
-            {
-                g.Draw();
-            }
-        }
-
-        public override void Add(Graphics g)
-        {
-            complexGraphicsList.Add(g);
-        }
-        public override void Remove(Graphics g)
-        {
-            complexGraphicsList.Remove(g);
-        }
-    }
-
-
-
-
-    #endregion
-
-    #region 外观模式
-    public class FacadePattern
-    {
-        public void Demo()
-        {
-        }
-    }
-
-    public class RegistrationFacade
-    {
-        private RegisterCourse registerCourse;
-        private NotifyStudent notifyStu;
-        public RegistrationFacade()
-        {
-            registerCourse = new RegisterCourse();
-            notifyStu = new NotifyStudent();
-        }
-
-        public bool RegisterCourse(string courseName, string studentName)
-        {
-            if (!registerCourse.CheckAvailable(courseName))
-            {
-                return false;
-            }
-
-            return notifyStu.Notify(studentName);
-        }
-    }
-
-    //相当于子系统
-    public class RegisterCourse
-    {
-        public bool CheckAvailable(string courseName)
-        {
-            Console.WriteLine("正在验证课程{0}是否人数已满",courseName);
-            return true;
-        }
-    }
-    public class NotifyStudent
-    {
-        public bool Notify(string studentName)
-        {
-            Console.WriteLine("正在向{0}发生通知", studentName);
-            return true;
-        }
-    }
-
-
-
-
 
     #endregion
 
     #region 享元模式
-    //类似字典查找，对象复用
-    #endregion
 
-    #region 代理模式
-    public abstract class Person
+
+    public abstract class Charactor
     {
-        public abstract void BuyProduct();
+        //Fields
+        protected char _symbol;
+
+        protected int _width;
+
+        protected int _height;
+
+        protected int _ascent;
+
+        protected int _descent;
+
+        protected int _pointSize;
+
+        public abstract void SetPointSize(int size);
+        public abstract void Display();
     }
 
-    public class RealBuyPerson : Person
+
+
+    public class CharactorA : Charactor
     {
-        public override void BuyProduct()
+        public CharactorA()
         {
-            Console.WriteLine("帮我买一个IPhone和一台苹果电脑");
+            this._symbol = 'A';
+            this._height = 100;
+            this._width = 120;
+            this._ascent = 70;
+            this._descent = 0;
+        }
+        public override void SetPointSize(int size)
+        {
+            this._pointSize = size;
+        }
+
+        public override void Display()
+        {
+            Console.WriteLine();
+        }
+    }
+    public class CharactorB : Charactor
+    {
+        public CharactorB()
+        {
+            this._symbol = 'B';
+            this._height = 100;
+            this._width = 120;
+            this._ascent = 70;
+            this._descent = 0;
+        }
+        public override void SetPointSize(int size)
+        {
+            this._pointSize = size;
+        }
+
+        public override void Display()
+        {
+            Console.WriteLine();
         }
     }
 
-    public class Friend : Person
+    public class CharactorC : Charactor
     {
-        RealBuyPerson realSubject;
-        public override void BuyProduct()
+        public CharactorC()
         {
-            Console.WriteLine("通过代理类访问真是实体对象的方法");
-            if (realSubject==null)
+            this._symbol = 'C';
+            this._height = 100;
+            this._width = 120;
+            this._ascent = 70;
+            this._descent = 0;
+        }
+        public override void SetPointSize(int size)
+        {
+            this._pointSize = size;
+        }
+
+        public override void Display()
+        {
+            Console.WriteLine();
+        }
+
+    }
+
+    public class CharactorFactory : SingleTon<CharactorFactory>
+    {
+        private Hashtable charactors = new Hashtable();
+
+        private CharactorFactory()
+        {
+            charactors.Add("A", new CharactorA());
+            charactors.Add("B", new CharactorB());
+            charactors.Add("C", new CharactorC());
+        }
+
+
+        public Charactor GetCharactor(string key)
+        {
+            Charactor c = charactors[key] as Charactor;
+            if (c == null)
             {
-                realSubject = new RealBuyPerson();
+                switch (key)
+                {
+                    case "A":
+                        c = new CharactorA(); break;
+
+                    case "B":
+                        c = new CharactorB(); break;
+
+                    case "C": c = new CharactorC(); break;
+                }
+                charactors.Add(key, c);
             }
-            PreBuyProduct();
-            PostBuyProduct();
+            return c;
         }
-        public void PreBuyProduct()
-        {
-            Console.WriteLine("我怕弄糊涂了，需要列一张清单，张三：要带相机，李四：要带Iphone...........");
-        }
-        // 买完东西之后，代理角色需要针对每位朋友需要的对买来的东西进行分类
-        public void PostBuyProduct()
-        {
-            Console.WriteLine("终于买完了，现在要对东西分一下，相机是张三的；Iphone是李四的..........");
-        }
+
+
+
     }
 
 
     #endregion
 
-    #region 模板方法模式
-    public abstract class Vegetbale
-    {
-        public void CookVegetable()
-        {
-            Console.WriteLine("抄蔬菜的一般做法");
-            this.PourOil();
-            this.HeatOil();
-            this.PourGegetable();
-            this.stir_fry();
-        }
-
-        public void PourOil()
-        {
-            Console.WriteLine("倒油");
-        }
-
-        public void HeatOil()
-        {
-            Console.WriteLine("把油烧热");
-        }
-
-        public abstract void PourGegetable();
-
-        public void stir_fry()
-        {
-            Console.WriteLine("翻炒");
-        }
-    }
-    #endregion
 
 
-    #region 命令模式
 
 
-    /// <summary>
-    /// 负责调用命令对象
-    /// </summary>
-    public class Invoke
-    {
-        public Command _command;
-
-        public Invoke(Command c)
-        {
-            this._command = c;
-        }
-
-        public void ExecuteCommand()
-        {
-            _command.Action();
-        }
-    }
 
 
-    /// <summary>
-    /// 命令抽象类
-    /// </summary>
-    public abstract class Command
-    {
-        protected Receiver _receiver;
-        public Command(Receiver r)
-        {
-            this._receiver = r;
-        }
-
-        public abstract void Action();
-    }
-
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public class ConcreteCommand : Command
-    {
-        public ConcreteCommand(Receiver receiver) : base(receiver)
-        {
-
-        }
-
-        public override void Action()
-        {
-            _receiver.Run();
-        }
-    }
-
-    /// <summary>
-    /// 命令接收者
-    /// </summary>
-    public class Receiver
-    {
-        public void Run()
-        {
-            Console.WriteLine("跑一千米");
-        }
-    }
-
-
-    /// <summary>
-    /// 命令发布者
-    /// </summary>
-    public class Custom_Command
-    {
-        public void Demo()
-        {
-            Receiver r = new Receiver();
-            Command c = new ConcreteCommand(r);
-            Invoke i = new Invoke(c);
-            i.ExecuteCommand();
-        }
-    }
 
 
     #endregion
 
-    #region 迭代器模式
-    //抽象聚合类
-    public interface IListCollection
-    {
-        Iterator GetIterator();
-    }
-
-
-    //迭代器抽象类
-    public interface Iterator
-    {
-        bool MoveNext();
-        Object GetCurrent();
-        void Next();
-        void Reset();
-    }
-
-    //具体的聚合类
-    public class ConcreteList : IListCollection
-    {
-        int[] collection;
-        public ConcreteList()
-        {
-            collection = new int[] { 2,4,6,8};
-        }
-        public Iterator GetIterator()
-        {
-            return new ConcreteIterator(this);
-        }
-    }
-    //具体的迭代器类
-    public class ConcreteIterator : Iterator
-    {
-        private ConcreteList _list;
-         private int _index;
- 
-         public ConcreteIterator(ConcreteList list)
-         {
-             _list = list;
-             _index = 0;
-         }
-    public object GetCurrent()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool MoveNext()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Next()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Reset()
-        {
-            throw new NotImplementedException();
-        }
-    }
-    #endregion
 
 
 }

@@ -489,7 +489,66 @@ namespace DesignMode
 
     #endregion
 
-    #region 组合模式
+    #region 观察者模式
+
+    public class Subject
+    {
+        private List<Observe> observes = new List<Observe>();
+
+        private int state;
+
+        public int GetState()
+        {
+            return state;
+        }
+
+        public void SetState(int state)
+        {
+            this.state = state;
+            NotifyAllObservers();
+        }
+
+        public void Subscribe(Observe observe)
+        {
+            observes.Add(observe);
+        }
+
+
+        public void NotifyAllObservers()
+        {
+            foreach (var item in observes)
+            {
+                item.Update();
+            }
+        }
+
+
+
+
+    }
+    public abstract class Observe
+    {
+        protected Subject subject;
+
+        public abstract void Update();
+    }
+
+
+    public class BinaryObserver : Observe
+    {
+        public BinaryObserver(Subject subject)
+        {
+            this.subject = subject;
+            this.subject.Subscribe(this);
+        }
+
+        public override void Update()
+        {
+            Console.WriteLine("更新了一下状态");
+        }
+    }
+
+
 
     #endregion
 

@@ -10,7 +10,7 @@ namespace DesignMode
     {
         static void Main(string[] args)
         {
-           
+            Console.WriteLine("Demno");
             Console.Read();
         }
     }

@@ -772,7 +772,64 @@ namespace DesignMode
     #endregion
 
 
+    #region 策略模式
 
+    public interface Strategy
+    {
+        void DoOperate(Action act);
+    }
+
+    public class OperationAdd : Strategy
+    {
+        public void DoOperate(Action act)
+        {
+            act();
+        }
+    }
+
+    public class OperationSubtract : Strategy
+    {
+        public void DoOperate(Action act)
+        {
+            act();
+        }
+    }
+
+    public class OperationMultiply : Strategy
+    {
+        public void DoOperate(Action act)
+        {
+            act();
+        }
+    }
+
+    public class StrategyContext
+    {
+        Strategy strategy;
+        public StrategyContext(Strategy s)
+        {
+            this.strategy = s;
+        }
+
+        public void Execute(Action act)
+        {
+            strategy.DoOperate(act);
+        }
+    }
+    public class StrategyDemo
+    {
+        public void Test()
+        {
+            Strategy operationSubtract = new OperationSubtract();
+            Strategy operationMultiply = new OperationMultiply();
+            Strategy OperationAdd = new OperationSubtract();
+
+            StrategyContext strategyContext = new StrategyContext(operationSubtract);
+            strategyContext.Execute(null);
+        }
+    }
+
+    #endregion
 
 
 

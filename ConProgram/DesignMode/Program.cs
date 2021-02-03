@@ -679,7 +679,97 @@ namespace DesignMode
     #endregion
 
 
+    #region 命令模式
+    //  将一个请求封装为一个对象，从而使你可用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤消的操作。
+    //  其实也就是一个消息中心
+    public interface Order
+    {
+        void Execute();
+    }
 
+    /// <summary>
+    /// 请求类
+    /// </summary>
+    public class Stock
+    {
+        private string name = "ABC";
+        private int quantity=10;
+
+        public void Buy()
+        {
+            Console.WriteLine($"name:{name}--quantity:{quantity} buy");
+        }
+        public void Sell()
+        {
+            Console.WriteLine($"name:{name}--quantity:{quantity} sell");
+        }
+    }
+
+
+    public class BuyStock : Order
+    {
+        private Stock stock;
+        public BuyStock(Stock s)
+        {
+            this.stock = s;
+        }
+        public void Execute()
+        {
+            stock.Buy();
+        }
+    }
+
+    public class SellStock : Order
+    {
+        private Stock stock;
+        public SellStock(Stock s)
+        {
+            this.stock = s;
+        }
+        public void Execute()
+        {
+            stock.Sell();
+        }
+    }
+
+    public class Broker
+    {
+        private List<Order> orders = new List<Order>();
+
+        public void TakeOrder(Order order)
+        {
+            orders.Add(order);
+        }
+
+        public void ReplaceOrders()
+        {
+            foreach (var item in orders)
+            {
+                item.Execute();
+            }
+            orders.Clear();
+        }
+
+    }
+
+    public class CommandPattern
+    {
+        public void  CommandPatternDemo()
+        {
+            Broker broker = new Broker();
+            Stock stock = new Stock();
+            BuyStock buyStock = new BuyStock(stock);
+            SellStock sellStock = new SellStock(stock);
+            broker.TakeOrder(buyStock);
+            broker.TakeOrder(sellStock);
+            broker.ReplaceOrders();
+        }
+       
+
+    }
+
+
+    #endregion
 
 
 

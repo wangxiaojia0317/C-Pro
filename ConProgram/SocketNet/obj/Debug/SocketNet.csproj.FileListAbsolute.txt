@@ -1,0 +1,7 @@
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\bin\Debug\SocketNet.exe.config
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\bin\Debug\SocketNet.exe
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\bin\Debug\SocketNet.pdb
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\obj\Debug\SocketNet.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\obj\Debug\SocketNet.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\obj\Debug\SocketNet.exe
+C:\Users\DELL\Desktop\Framework\C-Pro\ConProgram\SocketNet\obj\Debug\SocketNet.pdb
